@@ -10,7 +10,14 @@ Fork and clone this repo. On your fork, answer and commit the follow questions. 
 - Add two more countries to your dictionary.
 
 - Translate at least 3 of the capital names into another language.
-
+```
+citiesDict = ["USA": "Washington DC", "Spain": "Madrid", "Italy": "Rome"]
+citiesDict["Mexico"] = "Mexico City"
+citiesDict["Japan"] = "Tokyo"
+citiesDict["Italy"] = "\u{7F85}\u{99AC}"
+citiesDict["Madrid"] = "\u{645}\u{62F}\u{631}\u{64A}\u{62F}"
+citiesDict["Mexico"] = "\u{58A8}\u{897F}\u{54E5}\u{57CE}"
+```
 
 ## Question 2
 
@@ -28,16 +35,39 @@ Fork and clone this repo. On your fork, answer and commit the follow questions. 
 
 - Add 2 to every value inside of `someDict`.
 
+```
+
+var someDict:[String:Int] = ["One": 1, "Two": 4, "Three": 9, "Four": 16, "Five": 25]
+
+print(someDict["Three"]! + someDict["Five"]!)
+someDict["Six"] = 36
+someDict["Seven"] = 42
+
+someDict["productUpToSeven"] = someDict["One"]! + someDict["Two"]! + someDict["Three"]! + someDict["Four"]! + someDict["Five"]! + someDict["Six"]! + someDict["Seven"]!
+
+someDict["sumUptoSix"] = someDict["One"]! + someDict["Two"]! + someDict["Three"]! + someDict["Four"]! + someDict["Five"]! + someDict["Six"]!
+
+someDict.removeValue(forKey: "productUpToSeven" )
+someDict["sumUptoSix"] = nil
+
+print(someDict)
+
+for (key, value) in someDict {
+someDict[key] = value + 2
+}
+
+print(someDict)
+```
 
 ## Question 3
 
 Create a variable that is explicitly typed as a dictionary that maps strings to floating point numbers. Initialize the variable to the data shown in the table below which lists an author name and their comprehensibility score.
 
-| Author Name |	Score |
+| Author Name |    Score |
 | :--: | :--: |
-| Mark Twain |	8.9 |
-| Nathaniel Hawthorne	| 5.1 |
-| John Steinbeck	| 2.3 |
+| Mark Twain |    8.9 |
+| Nathaniel Hawthorne    | 5.1 |
+| John Steinbeck    | 2.3 |
 | C.S. Lewis | 9.9 |
 | Jon Krakauer | 6.1 |
 
@@ -58,32 +88,32 @@ You are given a dictionary code of type [String:String] which has values for all
 
 ```swift
 var code = [
-    "a" : "b",
-    "b" : "c",
-    "c" : "d",
-    "d" : "e",
-    "e" : "f",
-    "f" : "g",
-    "g" : "h",
-    "h" : "i",
-    "i" : "j",
-    "j" : "k",
-    "k" : "l",
-    "l" : "m",
-    "m" : "n",
-    "n" : "o",
-    "o" : "p",
-    "p" : "q",
-    "q" : "r",
-    "r" : "s",
-    "s" : "t",
-    "t" : "u",
-    "u" : "v",
-    "v" : "w",
-    "w" : "x",
-    "x" : "y",
-    "y" : "z",
-    "z" : "a"
+"a" : "b",
+"b" : "c",
+"c" : "d",
+"d" : "e",
+"e" : "f",
+"f" : "g",
+"g" : "h",
+"h" : "i",
+"i" : "j",
+"j" : "k",
+"k" : "l",
+"l" : "m",
+"m" : "n",
+"n" : "o",
+"o" : "p",
+"p" : "q",
+"q" : "r",
+"r" : "s",
+"s" : "t",
+"t" : "u",
+"u" : "v",
+"v" : "w",
+"w" : "x",
+"x" : "y",
+"y" : "z",
+"z" : "a"
 ]
 
 var message = "hello world"
@@ -99,26 +129,26 @@ You are given an array of dictionaries. Each dictionary in the array contains ex
 
 ```swift
 var people: [[String:String]] = [
-    [
-        "firstName": "Calvin",
-        "lastName": "Newton"
-    ],
-    [
-        "firstName": "Garry",
-        "lastName": "Mckenzie"
-    ],
-    [
-        "firstName": "Leah",
-        "lastName": "Rivera"
-    ],
-    [
-        "firstName": "Sonja",
-        "lastName": "Moreno"
-    ],
-    [
-        "firstName": "Noel",
-        "lastName": "Bowen"
-    ]
+[
+"firstName": "Calvin",
+"lastName": "Newton"
+],
+[
+"firstName": "Garry",
+"lastName": "Mckenzie"
+],
+[
+"firstName": "Leah",
+"lastName": "Rivera"
+],
+[
+"firstName": "Sonja",
+"lastName": "Moreno"
+],
+[
+"firstName": "Noel",
+"lastName": "Bowen"
+]
 ]
 ```
 
@@ -131,31 +161,31 @@ You are given an array of dictionaries. Each dictionary in the array describes t
 
 ```swift
 var peopleWithScores: [[String: String]] = [
-    [
-        "firstName": "Calvin",
-        "lastName": "Newton",
-        "score": "13"
-    ],
-    [
-        "firstName": "Garry",
-        "lastName": "Mckenzie",
-        "score": "23"
-    ],
-    [
-        "firstName": "Leah",
-        "lastName": "Rivera",
-        "score": "10"
-    ],
-    [
-        "firstName": "Sonja",
-        "lastName": "Moreno",
-        "score": "3"
-    ],
-    [
-        "firstName": "Noel",
-        "lastName": "Bowen",
-        "score": "16"
-    ]
+[
+"firstName": "Calvin",
+"lastName": "Newton",
+"score": "13"
+],
+[
+"firstName": "Garry",
+"lastName": "Mckenzie",
+"score": "23"
+],
+[
+"firstName": "Leah",
+"lastName": "Rivera",
+"score": "10"
+],
+[
+"firstName": "Sonja",
+"lastName": "Moreno",
+"score": "3"
+],
+[
+"firstName": "Noel",
+"lastName": "Bowen",
+"score": "16"
+]
 ]
 ```
 
@@ -205,11 +235,11 @@ c) How much money did you steal?
 
 ```swift
 var deposits: [String: [Double]] = [
- "Williams" : [300.65, 270.45, 24.70, 52.00, 99.99],
- "Cooper" : [200.56, 55.00, 600.78, 305.15, 410.76, 35.00],
- "Davies" : [400.98, 56.98, 300.00],
- "Clark" : [555.23, 45.67, 99.95, 80.76, 56.99, 46.50, 265.70],
- "Johnson" : [12.56, 300.00, 640.50, 255.60, 26.88]
+"Williams" : [300.65, 270.45, 24.70, 52.00, 99.99],
+"Cooper" : [200.56, 55.00, 600.78, 305.15, 410.76, 35.00],
+"Davies" : [400.98, 56.98, 300.00],
+"Clark" : [555.23, 45.67, 99.95, 80.76, 56.99, 46.50, 265.70],
+"Johnson" : [12.56, 300.00, 640.50, 255.60, 26.88]
 ]
 ```
 
@@ -241,11 +271,11 @@ let arr4 = [1, 3, 4, 5, 6, 7, 9]
 
 Given the following exert from the Declaration of Independence, find the most frequent word that is longer than 5 characters.
 
- - use `components(separatedBy:)` to break up the string into an array.
+- use `components(separatedBy:)` to break up the string into an array.
 
- - use `CharacterSet.punctuationCharacters` in union with any other characters you don't want in your array, like spaces and new lines.
+- use `CharacterSet.punctuationCharacters` in union with any other characters you don't want in your array, like spaces and new lines.
 
- ```swift
+```swift
 let declarationOfIndependence = """
 When in the Course of human events, it becomes necessary for one people to dissolve the
 political bands which have connected them with another, and to assume among the powers of the
