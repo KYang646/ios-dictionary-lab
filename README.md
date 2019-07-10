@@ -140,6 +140,32 @@ var message = "hello world"
 You are also given an `encodedMessage` which contains only lowercase letters and spaces. Use the `code` dictionary to decode the message and print it.
 `var encodedMessage = "uijt nfttbhf jt ibse up sfbe"`
 
+```
+var message = "hello world"
+var encryptedCode = ""
+
+for i in message {
+code[String(i)] = code[String(i)] ?? " "
+encryptedCode += code[String(i)]!
+}
+print(encryptedCode)
+
+
+var encodedMessage = "uijt nfttbhf jt ibse up sfbe"
+var decryptedCode = ""
+
+for i in encodedMessage {
+if i == " " {
+decryptedCode += ""}
+for(key, value) in code {
+if String(i) == value {
+decryptedCode.append(key)
+}
+}
+}
+print(decryptedCode)
+```
+
 
 ## Question 5
 
