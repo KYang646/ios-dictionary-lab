@@ -81,6 +81,24 @@ Using the dictionary created in the previous problem, do the following:
 
 - Use a for-loop to iterate through the dictionary you created at the beginning of the problem, and print out the content in the form of key: value, one entry per line.
 
+```
+var authorRatingz: [String:Double]
+
+authorRatingz = ["Mark Twain": 8.9, "Nathaniel Hawthorne": 5.1, "John Steinbeck": 2.3, "C.S. Lewis": 9.9, "John Krakauer": 6.1]
+
+print(authorRatingz["John Steinbeck"]!)
+authorRatingz["Erik Larson"] = 9.2
+
+if authorRatingz["John Krakauer"]! > authorRatingz["Mark Twain"]! {
+print("John Krakauer")
+} else {
+print("Mark Twain")
+}
+for (key, value) in authorRatingz {
+print("\(key), \(value)")
+}
+```
+
 
 ## Question 4
 
